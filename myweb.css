@@ -1,0 +1,654 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    color: #111;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* opening loader typing */
+.typing {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-size: 2rem;
+    font-weight: bold;
+    flex-direction: column;
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 4s;
+     font-size: 6rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.455);
+}
+
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/* opening loader typing end */
+
+/* header start */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    height: 140px;
+    background: #111010;
+}
+
+.logo {
+    padding-left: 4%;
+    position: relative;
+    top: 30px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.938);
+    font-family: cursive;
+    letter-spacing: 1px;
+}
+
+.theme-toggle {
+    position: relative;
+    right: 30px;
+    float: right;
+    padding-right: 16px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    list-style-type: none;
+    padding-top: 53px;
+    padding-left: 16px;
+}
+
+li a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    position: relative;
+    color: orange;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background: orange;
+    transition: .2s ease-in-out;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
+/* header end */
+
+/* section homebg start */
+
+.homebg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/designerbg.jpg);
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.986);
+    background-attachment: fixed;
+}
+
+.text {
+    padding: 55px;
+    font-size: 4em;
+    text-align: center;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.para {
+    text-align: center;
+    color: #fff;
+    font-size: 6em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.986);
+}
+
+/* section homebg end */
+
+
+/* section about start */
+
+.about {
+    height: 700px;
+    background: #000000dc;
+    display: flex;
+    border-bottom: 2px solid rgba(61, 59, 59, 0.753);
+}
+
+.aboutimg {
+    height: 402px;
+    width: 270px;
+    border: 2px solid rgba(54, 53, 53, 0.712);
+    background: rgba(128, 128, 128, 0.911);
+    position: relative;
+    top: 15%;
+    margin-left: 10%;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.938);
+}
+
+.img1 {
+    height: 400px;
+    width: 270px;
+}
+
+.aboutedit {
+    margin-top: 60px;
+    margin-left: 50px;
+    height: 70vh;
+    width: 70%;
+    background: rgba(34, 33, 33, 0.911);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.aboutedit h2 {
+    padding-top: 2%;
+    color: orangered;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.938);
+}
+
+.aboutedit p {
+    color: #e9e4e4;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    text-align: start;
+    padding-top: 40px;
+    padding-left: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 50px;
+    padding-top: 3%;
+    padding-left: 4%;
+    margin: 30px auto;
+}
+
+button {
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 15px;
+    outline: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    background: orangered;
+    letter-spacing: 1px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.781);
+}
+
+button:active {
+    background: rgba(224, 68, 11, 0.932);
+}
+
+.myskills {
+    display: none;
+    background: rgb(29, 28, 28);
+    height: 19vh;
+    width: 40%;
+    margin-top: 1%;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    margin-left: 3%;
+}
+
+.myskills h3 {
+    color: rgba(228, 151, 10, 0.925);
+    font-size: 2rem;
+    padding-left: 60px;
+    padding-top: 1%;
+}
+
+.myskills ul li {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 18px;
+    padding: 10px;
+    padding-left: 50px;
+    list-style-type: none;
+    color: #cecaca;
+}
+
+.Experience {
+    display: none;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    background: rgb(29, 28, 28);
+    height: 24vh;
+    width: 40%;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.Experience h3 {
+    color: rgba(228, 151, 10, 0.925);
+    font-size: 2rem;
+    padding-left: 60px;
+    padding-top: 1%;
+}
+
+.Experience ul li {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 18px;
+    padding: 15px;
+    padding-left: 50px;
+    list-style-type: none;
+    color: #cecaca;
+}
+
+.Education {
+    display: none;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    background: rgb(29, 28, 28);
+    height: 24vh;
+    width: 40%;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.Education h3 {
+    color: rgba(228, 151, 10, 0.925);
+    font-size: 2rem;
+    padding-left: 60px;
+    padding-top: 1%;
+}
+
+.Education ul li {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 18px;
+    padding: 15px;
+    padding-left: 50px;
+    list-style-type: none;
+    color: #cecaca;
+}
+
+/* section about end */
+
+/* section my services start */
+
+.myservicesbg {
+    height: 500px;
+    background: #000000dc;
+    border-bottom: 1px solid rgba(85, 84, 84, 0.747);
+}
+
+.myservicesbg h4 {
+    position: relative;
+    top: 14%;
+    padding-left: 11%;
+    font-size: 2.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 6%;
+}
+
+.servicecard {
+    height: 300px;
+    width: 350px;
+    background: #141414dc;
+    border-radius: 15px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.781);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.servicecard:hover {
+    background: rgba(182, 90, 29, 0.753);
+    transform: scale(1.05);
+}
+
+.servicecard i {
+    color: orange;
+    font-size: 1.3rem;
+    padding: 20px;
+    padding-top: 6%;
+}
+
+.servicecard h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 20px;
+}
+
+.servicecard p {
+    font-size: 1.2rem;
+    color: #d4d0d0ea;
+    padding-left: 1%;
+    padding-top: 5%;
+    letter-spacing: 1px;
+    line-height: 21px;
+}
+
+/* section my services end */
+
+
+
+/* section projects start */
+
+.projectbg {
+    height: 890px;
+    background: #000000dc;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 780px;
+    width: 60%;
+    background: #727171dc;
+    margin-left: 19%;
+    margin-top: 2%;
+    border-radius: 18px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.455);
+}
+
+.projectbg h3 {
+    font-size: 2rem;
+    color: orangered;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.781);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 45%;
+    padding-top: 1%;
+}
+
+.projectcard {
+    height: 200px;
+    width: 410px;
+    background: rgb(75, 74, 74);
+    margin-top: 1%;
+    border-radius: 14px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.781);
+}
+
+.projectcard h3 {
+    padding-left: 40%;
+}
+
+.projectcard p {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    padding-top: 8px;
+}
+
+video {
+    margin-left: 18%;
+    margin-top: 3%;
+    border: 2px solid green;
+    outline: none;
+}
+
+.projectcard h3 {
+    font-size: 1rem;
+}
+
+/* section projects end */
+
+
+/* footer contact start */
+
+.contact-bg {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/code.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.heading {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.heading i {
+    color: orange;
+}
+
+.heading h4 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: orangered;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.455);
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading p {
+    padding-top: 13%;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#fb i {
+    color: rgb(59, 59, 173);
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#fb i:hover {
+    color: rgb(32, 32, 192);
+}
+
+#insta i {
+    color: rgb(168, 67, 182);
+    font-size: 1.3rem;
+}
+
+#insta i:hover {
+    color: rgb(155, 33, 172);
+}
+
+#lin i {
+    color: rgb(41, 41, 206);
+    font-size: 1.3rem;
+    padding: 20px;
+}
+
+#lin i:hover {
+    color: rgb(28, 28, 211);
+}
+
+#ccv {
+    position: relative;
+    top: 60%;
+    right: 17%;
+    height: 50px;
+    width: 140px;
+    background: rgba(240, 6, 6, 0.966);
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px;
+    border-radius: 18px;
+    outline: none;
+    border: 1px solid red;
+}
+
+#ccv:active {
+    background: rgba(214, 11, 11, 0.932);
+}
+
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 17%;
+    gap: 50px;
+}
+
+.contactform input {
+    border-radius: 16px;
+    background: transparent;
+    background: rgba(100, 99, 99, 0.616);
+    height: 50px;
+    width: 480px;
+    color: white;
+    font-size: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(54, 53, 53, 0.911);
+    outline: none;
+}
+
+.contactform ::placeholder {
+    color: white;
+    font-size: 1rem;
+}
+
+#message {
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(54, 53, 53, 0.911);
+    outline: none;
+    background: rgba(100, 99, 99, 0.616);
+    border-radius: 16px;
+    resize: none;
+}
+
+.submit {
+    height: 45px;
+    width: 150px;
+    background: red;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+.submit:active {
+    background: rgba(228, 13, 13, 0.959);
+}
+
+.backtop {
+    position: relative;
+    top: 87%;
+    left: 15%;
+    font-size: 1rem;
+    height: 45px;
+    width: 40px;
+    background: gray;
+
+}
+
+.backtop:hover {
+    background: rgb(63, 62, 62);
+}
+
+/* footer contact end */
+
+/* footer regards start */
+
+.regardbg {
+    height: 40px;
+    background: rgb(214, 210, 210);
+}
+
+.regardbg p {
+    color: #111010;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: -1%;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* fooetr regards end */
+
+
+
+
+
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #111;
+    color: #fff;
+}
+
+.dark-theme .aboutedit,
+.dark-theme .myskills,
+.dark-theme .Experience,
+.dark-theme .Education,
+.dark-theme .myservicesbg,
+.dark-theme .projectbg,
+.dark-theme .servicecard,
+.dark-theme .box,
+.dark-theme .projectcard,
+.dark-theme .contact-bg {
+    background-color: #1a1a1a !important;
+    color: #fff !important;
+    box-shadow: 1px 2px 4px rgba(255, 255, 255, 0.1);
+}
